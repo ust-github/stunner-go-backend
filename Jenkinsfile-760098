@@ -1,0 +1,13 @@
+library identifier: 'sf-shared-library@gitlab-jenkins-library', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+   remote: 'https://gitlab.dagility.com/solution-factory/sf-jenkins-libraries-mirror',
+   credentialsId: '7335ace5-7a38-40d6-9cc6-f0169a6fca2c'])
+
+securityBaseline{
+  GitCredentialsId = "7335ace5-7a38-40d6-9cc6-f0169a6fca2c"
+  GitBranch = "master"
+  MicroserviceName = "backend"
+  MicroserviceTag = "10"
+  DagilityProjectId = "760093"
+  ImageUrl = "artifactory.dagility.com/docker-sf/backend:latest"
+}
